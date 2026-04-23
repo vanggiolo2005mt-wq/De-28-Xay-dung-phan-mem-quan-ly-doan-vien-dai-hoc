@@ -79,9 +79,7 @@ Hệ thống quản lý đoàn viên là ứng dụng hỗ trợ quản lý thô
 
 ### 6. Thống kê – báo cáo
 - Thống kê theo tháng / năm  
-- Thống kê theo khoa  
 - Tỷ lệ sinh hoạt  
-- Báo cáo đoàn phí  
 
 ---
 
