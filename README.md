@@ -99,3 +99,9 @@ Hệ thống quản lý đoàn viên là ứng dụng hỗ trợ quản lý thô
 ![](doanvien.png)
 ![alt text](doanphi.png)
 ---
+### sơ đồ classs
+
+![alt text](image-1.png)
+
+### sơ đồ ERD
+![alt text](image-2.png)
