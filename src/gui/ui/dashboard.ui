@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DashboardForm</class>
+
+ <widget class="QWidget" name="DashboardForm">
+
+  <property name="styleSheet">
+   <string>
+QWidget {
+    background-color: #F5F7FA;
+    font-family: Segoe UI;
+}
+
+/* CARD */
+QFrame {
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid #E0E0E0;
+}
+
+/* TITLE */
+QLabel#lblTitle {
+    font-size: 22px;
+    font-weight: bold;
+    color: #1F3A93;
+}
+
+/* BIG NUMBER */
+QLabel#lblChuaDong,
+QLabel#lblTongDV,
+QLabel#lblDangHD,
+QLabel#lblTyLe {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1565C0;
+}
+
+/* SMALL TEXT */
+QLabel {
+    font-size: 13px;
+    color: #444;
+}
+
+/* TABLE */
+QTableWidget {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+QHeaderView::section {
+    background-color: #F0F2F5;
+    padding: 6px;
+    font-weight: bold;
+    border: none;
+}
+   </string>
+  </property>
+
+  <layout class="QVBoxLayout">
+
+   <!-- TITLE -->
+   <item>
+    <widget class="QLabel" name="lblTitle">
+     <property name="text">
+      <string>📊 DASHBOARD</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+
+   <!-- CARDS -->
+   <item>
+    <layout class="QHBoxLayout">
+
+     <!-- CARD 1 -->
+     <item>
+      <widget class="QFrame" name="card1">
+       <layout class="QVBoxLayout">
+        <item>
+         <widget class="QLabel" name="lblChuaDong">
+          <property name="text"><string>0</string></property>
+          <property name="alignment"><set>Qt::AlignCenter</set></property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel">
+          <property name="text"><string>Chưa đóng phí</string></property>
+          <property name="alignment"><set>Qt::AlignCenter</set></property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+
+     <!-- CARD 2 -->
+     <item>
+      <widget class="QFrame" name="card2">
+       <layout class="QVBoxLayout">
+        <item>
+         <widget class="QLabel" name="lblTongDV">
+          <property name="text"><string>0</string></property>
+          <property name="alignment"><set>Qt::AlignCenter</set></property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel">
+          <property name="text"><string>Tổng đoàn viên</string></property>
+          <property name="alignment"><set>Qt::AlignCenter</set></property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+
+     <!-- CARD 3 -->
+     <item>
+      <widget class="QFrame" name="card3">
+       <layout class="QVBoxLayout">
+        <item>
+         <widget class="QLabel" name="lblDangHD">
+          <property name="text"><string>0</string></property>
+          <property name="alignment"><set>Qt::AlignCenter</set></property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel">
+          <property name="text"><string>Đang hoạt động</string></property>
+          <property name="alignment"><set>Qt::AlignCenter</set></property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+
+     <!-- CARD 4 -->
+     <item>
+      <widget class="QFrame" name="card4">
+       <layout class="QVBoxLayout">
+        <item>
+         <widget class="QLabel" name="lblTyLe">
+          <property name="text"><string>0%</string></property>
+          <property name="alignment"><set>Qt::AlignCenter</set></property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel">
+          <property name="text"><string>Tỷ lệ sinh hoạt</string></property>
+          <property name="alignment"><set>Qt::AlignCenter</set></property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+
+    </layout>
+   </item>
+
+   <!-- TABLE -->
+   <item>
+    <widget class="QTableWidget" name="tableWidget">
+     <property name="columnCount">
+      <number>7</number>
+     </property>
+
+     <column>
+      <property name="text"><string>Mã Hoạt động</string></property>
+     </column>
+     <column>
+      <property name="text"><string>Tên hoạt động</string></property>
+     </column>
+     <column>
+      <property name="text"><string>Ngày</string></property>
+     </column>
+     <column>
+      <property name="text"><string>Địa điểm</string></property>
+     </column>
+      <column>
+        <property name="text"><string>Số lượng tham gia</string></property>
+        </column>
+        <column>
+        <property name="text"><string>Phụ trách</string></property>
+        </column>
+    </widget>
+   </item>
+
+  </layout>
+ </widget>
+
+ <resources/>
+ <connections/>
+</ui>

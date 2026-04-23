@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ThongKeForm</class>
+
+ <widget class="QWidget" name="ThongKeForm">
+  <property name="windowTitle">
+   <string>Thống kê Đoàn viên</string>
+  </property>
+
+  <layout class="QVBoxLayout" name="verticalLayout">
+
+   <!-- ================= TITLE ================= -->
+   <item>
+    <widget class="QLabel" name="labelTitle">
+     <property name="text">
+      <string>THỐNG KÊ</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="styleSheet">
+      <string>
+color: #1F3A93;
+font-size:18pt;
+font-weight:bold;
+padding:10px;
+      </string>
+     </property>
+    </widget>
+   </item>
+
+   <!-- ================= FILTER ================= -->
+   <item>
+    <layout class="QHBoxLayout" name="filterLayout">
+
+     <item>
+      <widget class="QLabel">
+       <property name="text"><string>Tháng</string></property>
+      </widget>
+     </item>
+
+     <item>
+      <widget class="QComboBox" name="cbMonth"/>
+     </item>
+
+     <item>
+      <widget class="QLabel">
+       <property name="text"><string>Năm</string></property>
+      </widget>
+     </item>
+
+     <item>
+      <widget class="QComboBox" name="cbYear"/>
+     </item>
+
+     <item>
+      <widget class="QPushButton" name="btnThongKe">
+       <property name="text">
+        <string>Thống kê</string>
+       </property>
+      </widget>
+     </item>
+
+    </layout>
+   </item>
+
+   <!-- ================= DASHBOARD ================= -->
+   <item>
+    <layout class="QHBoxLayout" name="statsLayout">
+
+     <!-- TỔNG -->
+     <item>
+      <widget class="QFrame" name="cardTong">
+       <property name="styleSheet">
+        <string>
+QFrame {
+ background-color: #E1E9F8;
+ border-radius: 10px;
+ border: 1px solid #1F3A93;
+}
+QLabel {
+ font-size: 16px;
+ font-weight: bold;
+ color: #1F3A93;
+}
+        </string>
+       </property>
+       <layout class="QVBoxLayout">
+        <item>
+         <widget class="QLabel" name="lblTongDV">
+          <property name="text"><string>Tổng đoàn viên: 0</string></property>
+          <property name="alignment"><set>Qt::AlignCenter</set></property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+
+     <!-- ĐÃ ĐÓNG -->
+     <item>
+      <widget class="QFrame" name="cardDaDong">
+       <property name="styleSheet">
+        <string>
+QFrame {
+ background-color: #E8F5E9;
+ border-radius: 10px;
+ border: 1px solid #2E7D32;
+}
+QLabel {
+ font-size: 16px;
+ font-weight: bold;
+ color: #2E7D32;
+}
+        </string>
+       </property>
+       <layout class="QVBoxLayout">
+        <item>
+         <widget class="QLabel" name="lblDaDong">
+          <property name="text"><string>Đã đóng: 0</string></property>
+          <property name="alignment"><set>Qt::AlignCenter</set></property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+
+     <!-- TỶ LỆ ĐÓNG -->
+     <item>
+      <widget class="QFrame" name="cardTyLe">
+       <property name="styleSheet">
+        <string>
+QFrame {
+ background-color: #FFF8E1;
+ border-radius: 10px;
+ border: 1px solid #EF6C00;
+}
+QLabel {
+ font-size: 16px;
+ font-weight: bold;
+ color: #EF6C00;
+}
+        </string>
+       </property>
+       <layout class="QVBoxLayout">
+        <item>
+         <widget class="QLabel" name="lblTyLe">
+          <property name="text"><string>Tỷ lệ đóng: 0%</string></property>
+          <property name="alignment"><set>Qt::AlignCenter</set></property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+
+     <!-- SINH HOẠT -->
+     <item>
+      <widget class="QFrame" name="cardSinhHoat">
+       <property name="styleSheet">
+        <string>
+QFrame {
+ background-color: #E3F2FD;
+ border-radius: 10px;
+ border: 1px solid #1565C0;
+}
+QLabel {
+ font-size: 16px;
+ font-weight: bold;
+ color: #1565C0;
+}
+        </string>
+       </property>
+       <layout class="QVBoxLayout">
+        <item>
+         <widget class="QLabel" name="lblSinhHoat">
+          <property name="text"><string>Sinh hoạt: 0%</string></property>
+          <property name="alignment"><set>Qt::AlignCenter</set></property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+
+     <!-- TỔNG THU -->
+     <item>
+      <widget class="QFrame" name="cardTongThu">
+       <property name="styleSheet">
+        <string>
+QFrame {
+ background-color: #F3E5F5;
+ border-radius: 10px;
+ border: 1px solid #6A1B9A;
+}
+QLabel {
+ font-size: 16px;
+ font-weight: bold;
+ color: #6A1B9A;
+}
+        </string>
+       </property>
+       <layout class="QVBoxLayout">
+        <item>
+         <widget class="QLabel" name="lblTongThu">
+          <property name="text"><string>Tổng thu: 0 đ</string></property>
+          <property name="alignment"><set>Qt::AlignCenter</set></property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+
+    </layout>
+   </item>
+
+   <!-- ================= TABLE ================= -->
+   <item>
+    <widget class="QTableWidget" name="tableWidget"/>
+   </item>
+
+  </layout>
+ </widget>
+
+ <resources/>
+ <connections/>
+</ui>

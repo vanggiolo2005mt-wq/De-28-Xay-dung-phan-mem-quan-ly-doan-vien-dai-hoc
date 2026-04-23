@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+
+  <!-- ===== WINDOW ===== -->
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>600</height>
+   </rect>
+  </property>
+
+  <property name="windowTitle">
+   <string>Quản lý Đoàn viên</string>
+  </property>
+
+  <!-- ===== STYLE ===== -->
+  <property name="styleSheet">
+   <string>
+
+QMainWindow {
+    background-color: #f5f6fa;
+}
+
+QFrame#header_3 {
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+QLabel#lblTitle_3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+QFrame#sidebar_3 {
+    background-color: #2c3e50;
+}
+
+QFrame#sidebar_3 QLabel {
+    color: #ecf0f1;
+    font-weight: bold;
+    padding: 10px;
+}
+
+QPushButton {
+    color: white;
+    text-align: left;
+    padding: 10px;
+    border: none;
+    font-size: 14px;
+}
+
+QPushButton:hover {
+    background-color: #34495e;
+}
+
+QPushButton:pressed {
+    background-color: #1abc9c;
+}
+
+QStackedWidget {
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+   </string>
+  </property>
+
+  <!-- ===== CENTRAL ===== -->
+  <widget class="QWidget" name="centralwidget">
+
+   <layout class="QVBoxLayout" name="mainLayout">
+
+    <!-- ================= HEADER ================= -->
+    <item>
+     <widget class="QFrame" name="header_3">
+      <property name="minimumHeight">
+        <number>90</number>
+      </property>
+      <property name="maximumHeight">
+       <number>100</number>
+      </property>
+      <property name="styleSheet">
+       <string>
+QFrame#header_3 {
+    background-color: #34d6ab;
+    border-bottom: 1px solid #ddd;
+}
+       </string>
+         </property>
+
+
+      <layout class="QHBoxLayout" name="headerLayout">
+
+       <!-- TITLE -->
+       <item>
+        <widget class="QLabel" name="lblTitle_3">
+         <property name="text">
+          <string>🎓 HỆ THỐNG QUẢN LÝ ĐOÀN VIÊN</string>
+         </property>
+        </widget>
+       </item>
+
+       <!-- SPACER -->
+       <item>
+        <spacer name="spacer1">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </spacer>
+       </item>
+
+       <!-- SEARCH -->
+       <item>
+        <widget class="QLineEdit" name="txtSearch">
+         <property name="placeholderText">
+          <string>Tìm kiếm đoàn viên...</string>
+         </property>
+         <property name="minimumWidth">
+          <number>200</number>
+         </property>
+        </widget>
+       </item>
+
+       <item>
+        <widget class="QPushButton" name="btnSearch">
+         <property name="text">
+          <string>🔍 Tìm</string>
+         </property>
+         <property name="styleSheet">
+          <string>
+          QPushButton {
+              background-color: #1976D2;
+              color: white;
+              border-radius: 6px 12px;
+              padding: 6px;
+              font-weight:bold;
+          }
+            QPushButton:hover {
+                background-color: #1565C0;
+            }
+            QPushButton:pressed {
+                background-color: #0D47A1;
+            }
+            </string>
+          </property>
+        </widget>
+       </item>
+
+       <!-- USER -->
+       <item>
+        <widget class="QLabel" name="lblUser_3">
+         <property name="text">
+          <string>Xin chào: Admin</string>
+         </property>
+        </widget>
+       </item>
+
+       <!-- LOGOUT -->
+       <item>
+        <widget class="QPushButton" name="btnLogout_3">
+         <property name="text">
+          <string>🚪 Đăng xuất</string>
+         </property>
+         <property name="styleSheet">
+          <string>
+          QPushButton {
+              background-color: #E53935;
+              color: white;
+              border-radius: 6px 12px;
+              padding: 6px;
+              font-weight:bold;
+          }
+            QPushButton:hover {
+                background-color: #D32F2F;
+            }
+            QPushButton:pressed {
+                background-color: #B71C1C;
+            }
+            </string>
+          </property>
+        </widget>
+       </item>
+
+      </layout>
+     </widget>
+    </item>
+
+    <!-- =========================================================================================-->
+    <!-- ================= BODY ================= -->
+    <item>
+     <layout class="QHBoxLayout" name="bodyLayout">
+      <!-- SIDEBAR -->
+      <item>
+       <widget class="QFrame" name="sidebar_3">
+        <property name="minimumWidth">
+         <number>200</number>
+        </property>
+        <property name="maximumWidth">
+         <number>220</number>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+         </sizepolicy>
+         </property>
+        <layout class="QVBoxLayout" name="sidebarLayout">
+
+         <item>
+          <widget class="QLabel" name="lblMenu">
+          <property name="minimumHeight">
+          <number>30</number>
+            </property>
+            <property name="maximumHeight">
+            <number>40</number>
+            </property>
+           <property name="text">
+            <string>MENU</string>
+           </property>
+              <property name="alignment">
+                <set>Qt::AlignCenter</set>
+                </property>
+          </widget>
+         </item>
+
+         <item>
+          <widget class="QPushButton" name="btnDashboard_3">
+           <property name="text">
+            <string>🏠 Dashboard</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+         <widget class="QPushButton" name="btnUser_3">
+         <property name="text">
+         <string>👤 Quản lý User</string>
+            </property>
+            </widget>
+            </item>
+            
+         <item>
+          <widget class="QPushButton" name="btnDoanVien_3">
+           <property name="text">
+            <string>👥 Đoàn viên</string>
+           </property>
+          </widget>
+         </item>
+
+         <item>
+          <widget class="QPushButton" name="btnSinhHoat_3">
+           <property name="text">
+            <string>📅 Sinh hoạt</string>
+           </property>
+          </widget>
+         </item>
+
+         <item>
+          <widget class="QPushButton" name="btnDoanPhi_3">
+           <property name="text">
+            <string>💰 Đoàn phí</string>
+           </property>
+          </widget>
+         </item>
+
+         <item>
+          <widget class="QPushButton" name="btnTimKiem_3">
+           <property name="text">
+            <string>🔍 Tìm kiếm</string>
+           </property>
+          </widget>
+         </item>
+
+         <item>
+          <widget class="QPushButton" name="btnThongKe_3">
+           <property name="text">
+            <string>📊 Thống kê</string>
+           </property>
+          </widget>
+         </item>
+
+         <item>
+          <spacer name="spacer2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint">
+            <size>
+             <width>20</width>
+             <height>100</height>
+            </size>
+              </property>
+          </spacer>
+         </item>
+
+        </layout>
+       </widget>
+      </item>
+
+      <!-- STACKED WIDGET -->
+      <item>
+       <widget class="QStackedWidget" name="stackedWidget_3">
+
+        <widget class="QWidget" name="pageDashboard_3"/>
+        <widget class="QWidget" name="pageUser_3"/>
+        <widget class="QWidget" name="pageDoanVien_3"/>
+        <widget class="QWidget" name="pageSinhHoat_3"/>
+        <widget class="QWidget" name="pageDoanPhi_3"/>
+        <widget class="QWidget" name="pageTimKiem_3"/>
+        <widget class="QWidget" name="pageThongKe_3"/>
+
+       </widget>
+      </item>
+
+     </layout>
+    </item>
+
+   </layout>
+  </widget>
+
+  <widget class="QStatusBar" name="statusbar"/>
+
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

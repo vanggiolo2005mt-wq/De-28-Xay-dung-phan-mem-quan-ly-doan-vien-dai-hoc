@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+<class>DoanPhi</class>
+
+<widget class="QWidget" name="DoanPhi">
+ <layout class="QVBoxLayout">
+
+  <!-- ===== TITLE ===== -->
+  <item>
+   <widget class="QLabel">
+    <property name="text">
+     <string>💰 QUẢN LÝ ĐOÀN PHÍ</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="styleSheet">
+     <string>
+font-size: 20px;
+font-weight: bold;
+color: white;
+background-color: #2C3E50;
+padding: 10px;
+border-radius: 8px;
+     </string>
+    </property>
+   </widget>
+  </item>
+
+  <!-- ===== FILTER ===== -->
+  <item>
+   <layout class="QHBoxLayout">
+
+    <item><widget class="QLabel"><property name="text"><string>Khoa:</string></property></widget></item>
+    <item><widget class="QComboBox" name="comboKhoa"/></item>
+
+    <item><widget class="QLabel"><property name="text"><string>Lớp:</string></property></widget></item>
+    <item><widget class="QComboBox" name="comboLop"/></item>
+
+    <item><widget class="QLabel"><property name="text"><string>Tháng:</string></property></widget></item>
+    <item><widget class="QComboBox" name="comboThang"/></item>
+
+   </layout>
+  </item>
+
+  <!-- ===== TABLE ===== -->
+  <item>
+   <widget class="QTableWidget" name="tableDoanPhi">
+    <property name="columnCount"><number>6</number></property>
+
+    <column><property name="text"><string>Mã DV</string></property></column>
+    <column><property name="text"><string>Họ tên</string></property></column>
+    <column><property name="text"><string>Lớp</string></property></column>
+    <column><property name="text"><string>Khoa</string></property></column>
+    <column><property name="text"><string>Đã đóng ✔</string></property></column>
+    <column><property name="text"><string>Ghi chú</string></property></column>
+
+   </widget>
+  </item>
+
+  <!-- ===== BUTTON ===== -->
+  <item>
+   <layout class="QHBoxLayout">
+
+    <item>
+     <widget class="QPushButton" name="btnCheckAll">
+      <property name="text"><string>✔ Đóng hết</string></property>
+     </widget>
+    </item>
+
+    <item>
+     <widget class="QPushButton" name="btnUncheckAll">
+      <property name="text"><string>✖ Chưa đóng hết</string></property>
+     </widget>
+    </item>
+
+    <item>
+     <widget class="QPushButton" name="btnLuu">
+      <property name="text"><string>💾 Lưu</string></property>
+     </widget>
+    </item>
+
+   </layout>
+  </item>
+
+ </layout>
+</widget>
+
+<resources/>
+<connections/>
+</ui>

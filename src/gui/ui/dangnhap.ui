@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+<class>LoginForm</class>
+
+<widget class="QWidget" name="LoginForm">
+
+ <property name="windowTitle">
+  <string>Đăng nhập</string>
+ </property>
+
+ <!-- SAME STYLE AS REGISTER -->
+ <property name="styleSheet">
+  <string>
+
+QWidget#LoginForm {
+    background-color: transparent;
+}
+/* CARD (SYNC) */
+QFrame {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+/* TITLE */
+QLabel#title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #6A1B9A;
+}
+
+/* INPUT (SYNC REGISTER STYLE) */
+QLineEdit {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* INPUT FOCUS */
+QLineEdit:focus {
+    border: 1px solid #3498db;
+}
+
+/* BUTTON PRIMARY */
+QPushButton#btnLogin {
+    background-color: #3498db;
+    color: white;
+    border-radius: 6px;
+    height: 36px;
+    font-weight: bold;
+}
+
+QPushButton#btnLogin:hover {
+    background-color: #2980b9;
+}
+
+  </string>
+ </property>
+
+ <layout class="QVBoxLayout">
+
+  <property name="spacing">
+   <number>12</number>
+  </property>
+
+  <!-- TOP SPACE -->
+  <item>
+   <spacer>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </spacer>
+  </item>
+
+  <!-- CENTER -->
+  <item>
+   <layout class="QHBoxLayout">
+
+    <item>
+     <spacer/>
+    </item>
+
+    <!-- CARD -->
+    <item>
+     <widget class="QFrame" name="frame">
+
+      <property name="minimumWidth">
+       <number>320</number>
+      </property>
+
+      <property name="maximumWidth">
+       <number>350</number>
+      </property>
+
+      <layout class="QVBoxLayout">
+
+       <property name="spacing">
+        <number>12</number>
+       </property>
+
+       <!-- TITLE -->
+       <item>
+        <widget class="QLabel" name="title">
+         <property name="text">
+          <string>🔐 ĐĂNG NHẬP</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+
+       <!-- USER -->
+       <item>
+        <widget class="QLineEdit" name="txtUsername">
+         <property name="placeholderText">
+          <string>Tên đăng nhập</string>
+         </property>
+        </widget>
+       </item>
+
+       <!-- PASSWORD -->
+       <item>
+        <widget class="QLineEdit" name="txtPassword">
+         <property name="echoMode">
+          <enum>QLineEdit::Password</enum>
+         </property>
+         <property name="placeholderText">
+          <string>Mật khẩu</string>
+         </property>
+        </widget>
+       </item>
+
+       <!-- LOGIN BUTTON CENTER -->
+       <item>
+        <layout class="QHBoxLayout">
+
+         <item>
+          <spacer/>
+         </item>
+
+         <item>
+          <widget class="QPushButton" name="btnLogin">
+           <property name="text">
+            <string>Đăng nhập</string>
+           </property>
+          </widget>
+         </item>
+
+         <item>
+          <spacer/>
+         </item>
+
+        </layout>
+       </item>
+
+       <!-- STATUS -->
+       <item>
+        <widget class="QLabel" name="lblStatus">
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+
+      </layout>
+     </widget>
+    </item>
+
+    <item>
+     <spacer/>
+    </item>
+
+   </layout>
+  </item>
+
+  <!-- BOTTOM -->
+  <item>
+   <spacer>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </spacer>
+  </item>
+
+ </layout>
+</widget>
+
+<resources/>
+<connections/>
+
+</ui>

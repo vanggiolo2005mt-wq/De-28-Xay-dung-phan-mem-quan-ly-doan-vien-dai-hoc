@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SinhHoat</class>
+ <widget class="QWidget" name="SinhHoat">
+
+  <property name="windowTitle">
+   <string>Sinh hoạt đoàn</string>
+  </property>
+
+  <layout class="QVBoxLayout">
+
+   <!-- ================= TITLE ================= -->
+   <item>
+    <widget class="QLabel" name="labelTitle">
+     <property name="text">
+      <string>📅 QUẢN LÝ SINH HOẠT ĐOÀN</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="styleSheet">
+      <string>
+font-size: 20px;
+font-weight: bold;
+color: white;
+background-color: #1F3A93;
+padding: 10px;
+border-radius: 6px;
+      </string>
+     </property>
+    </widget>
+   </item>
+
+   <!-- ================= FORM ================= -->
+   <item>
+    <widget class="QFrame" name="frameForm">
+     <layout class="QGridLayout">
+
+      <item row="0" column="0">
+       <widget class="QLabel"><property name="text"><string>Mã HĐ</string></property></widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="lineEdit_ma"/>
+      </item>
+
+      <item row="1" column="0">
+       <widget class="QLabel"><property name="text"><string>Tên hoạt động</string></property></widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="lineEdit_ten"/>
+      </item>
+
+      <item row="2" column="0">
+       <widget class="QLabel"><property name="text"><string>Ngày</string></property></widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QDateEdit" name="dateEdit">
+        <property name="calendarPopup"><bool>true</bool></property>
+        <property name="displayFormat"><string>dd/MM/yyyy</string></property>
+       </widget>
+      </item>
+
+      <item row="3" column="0">
+       <widget class="QLabel"><property name="text"><string>Địa điểm</string></property></widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLineEdit" name="lineEdit_diadiem"/>
+      </item>
+
+      <item row="4" column="0">
+       <widget class="QLabel"><property name="text"><string>Nội dung</string></property></widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLineEdit" name="lineEdit_noidung"/>
+      </item>
+
+      <!-- ================= KHOA ================= -->
+      <item row="5" column="0">
+       <widget class="QLabel"><property name="text"><string>Khoa</string></property></widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QComboBox" name="comboKhoa">
+        <item><property name="text"><string>Tất cả</string></property></item>
+        <item><property name="text"><string>CNTT</string></property></item>
+        <item><property name="text"><string>Kinh tế</string></property></item>
+        <item><property name="text"><string>Cơ khí</string></property></item>
+        <item><property name="text"><string>Điện - Điện tử</string></property></item>
+       </widget>
+      </item>
+
+      <!-- ================= LỚP (FIX BUG comboLop) ================= -->
+      <item row="6" column="0">
+       <widget class="QLabel">
+        <property name="text"><string>Lớp</string></property>
+       </widget>
+      </item>
+
+      <item row="6" column="1">
+       <widget class="QComboBox" name="comboLop">
+        <item><property name="text"><string>Tất cả</string></property></item>
+       </widget>
+      </item>
+
+     </layout>
+    </widget>
+   </item>
+
+   <!-- ================= BUTTON ================= -->
+   <item>
+    <layout class="QHBoxLayout">
+
+     <item>
+      <widget class="QPushButton" name="btnThem">
+       <property name="text"><string>➕ Thêm</string></property>
+      </widget>
+     </item>
+
+     <item>
+      <widget class="QPushButton" name="btnSua">
+       <property name="text"><string>✏️ Sửa</string></property>
+      </widget>
+     </item>
+
+     <item>
+      <widget class="QPushButton" name="btnXoa">
+       <property name="text"><string>❌ Xóa</string></property>
+      </widget>
+     </item>
+
+     <item>
+      <widget class="QPushButton" name="btnRefresh">
+       <property name="text"><string>🔄 Làm mới</string></property>
+      </widget>
+     </item>
+
+    </layout>
+   </item>
+
+   <!-- ================= TABLE HOẠT ĐỘNG ================= -->
+   <item>
+    <widget class="QTableWidget" name="tableHoatDong">
+     <property name="columnCount"><number>5</number></property>
+
+     <column><property name="text"><string>Mã HĐ</string></property></column>
+     <column><property name="text"><string>Tên</string></property></column>
+     <column><property name="text"><string>Ngày</string></property></column>
+     <column><property name="text"><string>Địa điểm</string></property></column>
+     <column><property name="text"><string>Nội dung</string></property></column>
+
+    </widget>
+   </item>
+
+   <!-- ================= TITLE ĐIỂM DANH ================= -->
+   <item>
+    <widget class="QLabel">
+     <property name="text">
+      <string>👥 ĐIỂM DANH ĐOÀN VIÊN</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="styleSheet">
+      <string>
+font-size: 16px;
+font-weight: bold;
+color: white;
+background-color: #27AE60;
+padding: 8px;
+border-radius: 6px;
+      </string>
+     </property>
+    </widget>
+   </item>
+
+   <!-- ================= FILTER ================= -->
+   <item>
+    <layout class="QHBoxLayout">
+
+     <item>
+      <widget class="QLabel">
+       <property name="text"><string>Lọc khoa:</string></property>
+      </widget>
+     </item>
+
+     <item>
+      <widget class="QComboBox" name="comboLocKhoa">
+       <item><property name="text"><string>Tất cả</string></property></item>
+       <item><property name="text"><string>CNTT</string></property></item>
+       <item><property name="text"><string>Kinh tế</string></property></item>
+       <item><property name="text"><string>Cơ khí</string></property></item>
+       <item><property name="text"><string>Điện - Điện tử</string></property></item>
+      </widget>
+     </item>
+
+    </layout>
+   </item>
+
+   <!-- ================= TABLE ĐIỂM DANH ================= -->
+   <item>
+    <widget class="QTableWidget" name="tableDiemDanh">
+     <property name="columnCount"><number>5</number></property>
+
+     <column><property name="text"><string>Mã DV</string></property></column>
+     <column><property name="text"><string>Họ tên</string></property></column>
+     <column><property name="text"><string>Lớp</string></property></column>
+     <column><property name="text"><string>Khoa</string></property></column>
+     <column><property name="text"><string>Có mặt ✔</string></property></column>
+
+    </widget>
+   </item>
+
+   <!-- ================= BUTTON ĐIỂM DANH ================= -->
+   <item>
+    <layout class="QHBoxLayout">
+
+     <item>
+      <widget class="QPushButton" name="btnCheckAll">
+       <property name="text"><string>✔ Tất cả</string></property>
+      </widget>
+     </item>
+
+     <item>
+      <widget class="QPushButton" name="btnUncheckAll">
+       <property name="text"><string>✖ Bỏ chọn</string></property>
+      </widget>
+     </item>
+
+     <item>
+      <widget class="QPushButton" name="btnLuuDiemDanh">
+       <property name="text"><string>💾 Lưu điểm danh</string></property>
+      </widget>
+     </item>
+
+    </layout>
+   </item>
+
+  </layout>
+ </widget>
+</ui>

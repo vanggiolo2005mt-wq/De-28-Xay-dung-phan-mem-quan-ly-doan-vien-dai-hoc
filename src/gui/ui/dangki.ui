@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+<class>RegisterForm</class>
+
+<widget class="QWidget" name="RegisterForm">
+ <property name="windowTitle">
+  <string>Đăng ký</string>
+ </property>
+
+ <property name="styleSheet">
+  <string>
+QWidget {
+    background-color: rgba(0, 0, 0, 120);
+}
+
+/* CARD */
+QFrame {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+/* TITLE */
+QLabel#lblTitle {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* INPUT */
+QLineEdit {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* BUTTON */
+QPushButton {
+    background-color: #3498db;
+    color: white;
+    border-radius: 6px;
+    height: 35px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #2980b9;
+}
+
+/* BACK BUTTON */
+QPushButton#btnBackLogin {
+    background: transparent;
+    color: #3498db;
+    border: none;
+}
+  </string>
+ </property>
+
+ <layout class="QVBoxLayout">
+
+  <!-- Spacer top -->
+  <item>
+   <spacer name="spacerTop">
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </spacer>
+  </item>
+
+  <!-- CENTER -->
+  <item>
+   <layout class="QHBoxLayout">
+
+    <item>
+     <spacer name="spacerLeft">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </spacer>
+    </item>
+
+    <!-- CARD -->
+    <item>
+     <widget class="QFrame">
+
+      <!-- SIZE -->
+      <property name="minimumWidth">
+       <number>320</number>
+      </property>
+      <property name="maximumWidth">
+       <number>350</number>
+      </property>
+
+      <layout class="QVBoxLayout">
+
+       <property name="spacing">
+        <number>12</number>
+       </property>
+
+       <!-- TITLE -->
+       <item>
+        <widget class="QLabel" name="lblTitle">
+         <property name="text">
+          <string>📝 ĐĂNG KÝ TÀI KHOẢN</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+
+       <!-- USER -->
+       <item>
+        <widget class="QLineEdit" name="txtUsername">
+         <property name="placeholderText">
+          <string>Tên đăng nhập</string>
+         </property>
+        </widget>
+       </item>
+
+       <!-- EMAIL -->
+       <item>
+        <widget class="QLineEdit" name="txtEmail">
+         <property name="placeholderText">
+          <string>Email trường</string>
+         </property>
+        </widget>
+       </item>
+
+       <!-- PASSWORD -->
+       <item>
+        <widget class="QLineEdit" name="txtPassword">
+         <property name="echoMode">
+          <enum>QLineEdit::Password</enum>
+         </property>
+         <property name="placeholderText">
+          <string>Mật khẩu</string>
+         </property>
+        </widget>
+       </item>
+
+       <!-- CONFIRM -->
+       <item>
+        <widget class="QLineEdit" name="txtConfirm">
+         <property name="echoMode">
+          <enum>QLineEdit::Password</enum>
+         </property>
+         <property name="placeholderText">
+          <string>Nhập lại mật khẩu</string>
+         </property>
+        </widget>
+       </item>
+
+       <!-- BUTTON -->
+       <item>
+        <widget class="QPushButton" name="btnRegister">
+         <property name="text">
+          <string>Đăng ký</string>
+         </property>
+        </widget>
+       </item>
+
+       <!-- BACK -->
+       <item>
+        <widget class="QPushButton" name="btnBackLogin">
+         <property name="text">
+          <string>← Quay lại đăng nhập</string>
+         </property>
+        </widget>
+       </item>
+
+      </layout>
+     </widget>
+    </item>
+
+    <item>
+     <spacer name="spacerRight">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </spacer>
+    </item>
+
+   </layout>
+  </item>
+
+  <!-- Spacer bottom -->
+  <item>
+   <spacer name="spacerBottom">
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </spacer>
+  </item>
+
+ </layout>
+</widget>
+
+<resources/>
+<connections/>
+</ui>

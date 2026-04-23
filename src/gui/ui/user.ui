@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+<class>UserForm</class>
+
+<widget class="QWidget" name="UserForm">
+
+ <property name="styleSheet">
+  <string>
+
+QWidget {
+    background-color: #f5f7fa;
+    font-family: Segoe UI;
+}
+
+/* TITLE */
+QLabel#lblTitle {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* CARD */
+QFrame {
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+}
+
+/* INPUT */
+QLineEdit, QComboBox {
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* BUTTON */
+QPushButton {
+    padding: 8px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+QPushButton#btnAdd {
+    background-color: #27ae60;
+    color: white;
+}
+QPushButton#btnAdd:hover { background-color: #219150; }
+
+QPushButton#btnUpdate {
+    background-color: #f39c12;
+    color: white;
+}
+QPushButton#btnUpdate:hover { background-color: #d68910; }
+
+QPushButton#btnDelete {
+    background-color: #e74c3c;
+    color: white;
+}
+QPushButton#btnDelete:hover { background-color: #c0392b; }
+
+QPushButton#btnRefresh {
+    background-color: #3498db;
+    color: white;
+}
+QPushButton#btnRefresh:hover { background-color: #2980b9; }
+
+/* TABLE */
+QTableWidget {
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+QHeaderView::section {
+    background-color: #ecf0f1;
+    padding: 6px;
+    font-weight: bold;
+    border: none;
+}
+
+  </string>
+ </property>
+
+ <layout class="QVBoxLayout">
+
+  <!-- ===== TITLE ===== -->
+  <item>
+   <widget class="QLabel" name="lblTitle">
+    <property name="text">
+     <string>👤 QUẢN LÝ TÀI KHOẢN</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+  </item>
+
+  <!-- ===== FORM ===== -->
+  <item>
+   <widget class="QFrame">
+    <layout class="QGridLayout">
+
+     <!-- USERNAME -->
+     <item row="0" column="0">
+      <widget class="QLabel">
+       <property name="text"><string>Tên đăng nhập</string></property>
+      </widget>
+     </item>
+
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="txtUsername"/>
+     </item>
+
+     <!-- PASSWORD -->
+     <item row="1" column="0">
+      <widget class="QLabel">
+       <property name="text"><string>Mật khẩu</string></property>
+      </widget>
+     </item>
+
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="txtPassword">
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+     </item>
+
+     <!-- ROLE -->
+     <item row="2" column="0">
+      <widget class="QLabel">
+       <property name="text"><string>Quyền</string></property>
+      </widget>
+     </item>
+
+     <item row="2" column="1">
+      <widget class="QComboBox" name="cbRole">
+       <item><property name="text"><string>ADMIN</string></property></item>
+       <item><property name="text"><string>BITHU</string></property></item>
+       <item><property name="text"><string>CANBO</string></property></item>
+      </widget>
+     </item>
+
+    </layout>
+   </widget>
+  </item>
+
+  <!-- ===== BUTTON ===== -->
+  <item>
+   <layout class="QHBoxLayout">
+
+    <item>
+     <widget class="QPushButton" name="btnAdd">
+      <property name="text"><string>➕ Thêm</string></property>
+     </widget>
+    </item>
+
+    <item>
+     <widget class="QPushButton" name="btnUpdate">
+      <property name="text"><string>✏️ Sửa</string></property>
+     </widget>
+    </item>
+
+    <item>
+     <widget class="QPushButton" name="btnDelete">
+      <property name="text"><string>❌ Xóa</string></property>
+     </widget>
+    </item>
+
+    <item>
+     <widget class="QPushButton" name="btnRefresh">
+      <property name="text"><string>🔄 Làm mới</string></property>
+     </widget>
+    </item>
+
+   </layout>
+  </item>
+
+  <!-- ===== SEARCH ===== -->
+  <item>
+   <layout class="QHBoxLayout">
+
+    <item>
+     <widget class="QLineEdit" name="txtSearch">
+      <property name="placeholderText">
+       <string>Tìm kiếm username...</string>
+      </property>
+     </widget>
+    </item>
+
+    <item>
+     <widget class="QPushButton" name="btnSearch">
+      <property name="text"><string>🔍 Tìm</string></property>
+     </widget>
+    </item>
+
+   </layout>
+  </item>
+
+  <!-- ===== TABLE ===== -->
+  <item>
+   <widget class="QTableWidget" name="tableUser">
+    <property name="columnCount">
+     <number>3</number>
+    </property>
+
+    <column>
+     <property name="text"><string>ID</string></property>
+    </column>
+
+    <column>
+     <property name="text"><string>Username</string></property>
+    </column>
+
+    <column>
+     <property name="text"><string>Role</string></property>
+    </column>
+
+   </widget>
+  </item>
+
+ </layout>
+
+</widget>
+
+<resources/>
+<connections/>
+</ui>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TimKiemForm</class>
+
+ <widget class="QWidget" name="TimKiemForm">
+
+  <layout class="QVBoxLayout" name="mainLayout">
+
+   <!-- ================= SEARCH BAR ================= -->
+   <item>
+    <layout class="QHBoxLayout" name="searchLayout">
+
+     <item>
+      <widget class="QLabel" name="lblSearchTitle">
+       <property name="text">
+        <string>🔍 Tìm kiếm</string>
+       </property>
+      </widget>
+     </item>
+
+     <item>
+      <widget class="QLineEdit" name="txtSearch">
+       <property name="placeholderText">
+        <string>Nhập từ khóa (mã, tên, lớp...)</string>
+       </property>
+      </widget>
+     </item>
+
+     <item>
+      <widget class="QPushButton" name="btnSearch">
+       <property name="text">
+        <string>Tìm kiếm</string>
+       </property>
+      </widget>
+     </item>
+
+     <item>
+      <widget class="QPushButton" name="btnReset">
+       <property name="text">
+        <string>Reset</string>
+       </property>
+      </widget>
+     </item>
+
+    </layout>
+   </item>
+
+   <!-- ================= TAB ================= -->
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+
+     <!-- ===== ĐOÀN VIÊN ===== -->
+     <widget class="QWidget" name="tabDoanVien">
+      <attribute name="title">
+       <string>Đoàn viên</string>
+      </attribute>
+
+      <layout class="QVBoxLayout">
+
+       <item>
+        <widget class="QTableWidget" name="tblDoanVien">
+         <property name="columnCount">
+          <number>7</number>
+         </property>
+
+         <column><property name="text"><string>Mã DV</string></property></column>
+         <column><property name="text"><string>Họ tên</string></property></column>
+         <column><property name="text"><string>Ngày sinh</string></property></column>
+         <column><property name="text"><string>Lớp</string></property></column>
+         <column><property name="text"><string>Khoa</string></property></column>
+         <column><property name="text"><string>Ngày vào đoàn</string></property></column>
+         <column><property name="text"><string>Trạng thái</string></property></column>
+
+        </widget>
+       </item>
+
+      </layout>
+     </widget>
+
+     <!-- ===== SINH HOẠT ===== -->
+     <widget class="QWidget" name="tabSinhHoat">
+      <attribute name="title">
+       <string>Sinh hoạt</string>
+      </attribute>
+
+      <layout class="QVBoxLayout">
+
+       <item>
+        <widget class="QTableWidget" name="tblSinhHoat">
+         <property name="columnCount">
+          <number>5</number>
+         </property>
+
+         <column><property name="text"><string>Mã HĐ</string></property></column>
+         <column><property name="text"><string>Tên hoạt động</string></property></column>
+         <column><property name="text"><string>Ngày</string></property></column>
+         <column><property name="text"><string>Địa điểm</string></property></column>
+         <column><property name="text"><string>Nội dung</string></property></column>
+
+        </widget>
+       </item>
+
+      </layout>
+     </widget>
+
+     <!-- ===== ĐOÀN PHÍ ===== -->
+     <widget class="QWidget" name="tabDoanPhi">
+      <attribute name="title">
+       <string>Đoàn phí</string>
+      </attribute>
+
+      <layout class="QVBoxLayout">
+
+       <item>
+        <widget class="QTableWidget" name="tblDoanPhi">
+         <property name="columnCount">
+          <number>6</number>
+         </property>
+
+         <column><property name="text"><string>Mã DV</string></property></column>
+         <column><property name="text"><string>Họ tên</string></property></column>
+         <column><property name="text"><string>Tháng</string></property></column>
+         <column><property name="text"><string>Số tiền</string></property></column>
+         <column><property name="text"><string>Ngày đóng</string></property></column>
+         <column><property name="text"><string>Trạng thái</string></property></column>
+
+        </widget>
+       </item>
+
+      </layout>
+     </widget>
+
+    </widget>
+   </item>
+
+  </layout>
+ </widget>
+
+ <resources/>
+ <connections/>
+</ui>
